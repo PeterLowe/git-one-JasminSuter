@@ -1,0 +1,132 @@
+jasmi@BeanMachine MINGW64 /d/Desktop Folders/Git
+$ git init
+Initialized empty Git repository in D:/Desktop Folders/Git/.git/
+
+jasmi@BeanMachine MINGW64 /d/Desktop Folders/Git (master)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m "first commit"
+[master (root-commit) de504b6] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+$ git branch -M main
+
+jasmi@BeanMachine MINGW64 /d/Desktop Folders/Git (main)
+
+$ git remote add origin https://github.com/PeterLowe/git-one-JasminSuter.git
+
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Git Branch.png
+        Git Commit.png
+        Git Init .png
+        Git Remote.png
+        Git add.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 236 bytes | 236.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PeterLowe/git-one-JasminSuter.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+
+jasmi@BeanMachine MINGW64 /d/Desktop Folders/Git Projects/Git Clone Example
+$ git clone https://github.com/PeterLowe/git-one-JasminSuter.git
+Cloning into 'git-one-JasminSuter'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+$ git pull
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 10 (delta 0), reused 10 (delta 0), pack-reused 0
+Unpacking objects: 100% (10/10), 107.40 KiB | 332.00 KiB/s, done.
+From https://github.com/PeterLowe/git-one-JasminSuter
+   de504b6..0c3f034  main       -> origin/main
+Updating de504b6..0c3f034
+Fast-forward
+ Git Branch.png | Bin 0 -> 8429 bytes
+ Git Clone.png  | Bin 0 -> 15725 bytes
+ Git Commit.png | Bin 0 -> 18376 bytes
+ Git Init .png  | Bin 0 -> 11933 bytes
+ Git Push.png   | Bin 0 -> 18853 bytes
+ Git Remote.png | Bin 0 -> 9623 bytes
+ Git Status.png | Bin 0 -> 17477 bytes
+ Git add.png    | Bin 0 -> 17306 bytes
+ 8 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Git Branch.png
+ create mode 100644 Git Clone.png
+ create mode 100644 Git Commit.png
+ create mode 100644 Git Init .png
+ create mode 100644 Git Push.png
+ create mode 100644 Git Remote.png
+ create mode 100644 Git Status.png
+ create mode 100644 Git add.png
+
+
+jasmi@BeanMachine MINGW64 /d/Desktop Folders/Git Projects/Git (main)
+$ git add .
+
+jasmi@BeanMachine MINGW64 /d/Desktop Folders/Git Projects/Git (main)
+$ git commit -m "adding files for rm test"
+[main 51b977a] adding files for rm test
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Git Pull.png
+ create mode 100644 rmtest.txt
+
+jasmi@BeanMachine MINGW64 /d/Desktop Folders/Git Projects/Git (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 47.72 KiB | 23.86 MiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/PeterLowe/git-one-JasminSuter.git
+   0c3f034..51b977a  main -> main
+branch 'main' set up to track 'origin/main'.
+
+jasmi@BeanMachine MINGW64 /d/Desktop Folders/Git Projects/Git (main)
+$ git rm rmtest
+fatal: pathspec 'rmtest' did not match any files
+
+jasmi@BeanMachine MINGW64 /d/Desktop Folders/Git Projects/Git (main)
+$ git rm rmtest.txt
+rm 'rmtest.txt'
+
+jasmi@BeanMachine MINGW64 /d/Desktop Folders/Git Projects/Git (main)
+$ git add .
+
+jasmi@BeanMachine MINGW64 /d/Desktop Folders/Git Projects/Git (main)
+$ git commit -m "rm test completed, file removed"
+[main 915aa34] rm test completed, file removed
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 rmtest.txt
+
+jasmi@BeanMachine MINGW64 /d/Desktop Folders/Git Projects/Git (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 235 bytes | 235.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/PeterLowe/git-one-JasminSuter.git
+   51b977a..915aa34  main -> main
+branch 'main' set up to track 'origin/main'.
+
+
